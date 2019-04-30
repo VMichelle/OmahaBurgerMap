@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyDXnADyXeQTDzVsICY4NVSrG2wUL2qJF4A",
+    authDomain: "omaha-burger-map.firebaseapp.com",
+    databaseURL: "https://omaha-burger-map.firebaseio.com",
+    projectId: "omaha-burger-map",
+    storageBucket: "omaha-burger-map.appspot.com",
+    messagingSenderId: "583560045221"
+  }
 };
 
 /*
