@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MapService } from '../../services/map.service';
+
+// import { Observable}  from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { geoLocations } from 'src/app/locations';
 
 @Component({
   selector: 'app-google-map',
@@ -10,15 +15,18 @@ export class GoogleMapComponent implements OnInit {
   text: string = 'Omaha Burger Map';
   lat: number = 41.2565;
   lng: number = -95.9345;
-  zoom: number = 12;
+  zoom: number = 14;
 
-  markers = [
-    { lat: 41.257430, long: -95.937769 },
-    { lat: 41.236684, long: -95.954771}
-    ];
+  burgers: geoLocations[];
 
-
-  constructor() { }
+  constructor( private mapService: MapService ) { 
+    
+    this.mapService.getLocations().subscribe(res =>{
+      console.log(res);
+      this.burgers = res;
+    })
+    
+  }
 
   ngOnInit() {
 

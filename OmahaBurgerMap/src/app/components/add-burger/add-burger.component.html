@@ -1,0 +1,42 @@
+<mat-grid-list cols="2">
+    <mat-grid-tile>
+            <img src="https://media.giphy.com/media/3jckG1c9y8RZl9UE7W/giphy.gif" alt="">
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        
+        <form class="addBurgerForm">
+            <h2>Tell us about your favorite burger</h2>
+            <mat-form-field class="inputField">
+                <input required matInput placeholder="Location name" [(ngModel)]="burger.name" name="name">
+            
+            </mat-form-field>
+
+            <mat-form-field class="inputField">
+            <input required matInput placeholder="Latitude" [(ngModel)]="burger.latitude" name="latitude">
+            <mat-hint>example: 41.257679</mat-hint>
+            </mat-form-field>
+        
+            <mat-form-field class="inputField">
+                <input required matInput placeholder="Longitude" [(ngModel)]="burger.longitude" name="longitude">
+                <mat-hint>example: -95.961252</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="inputField">
+                <input matInput placeholder="Description" [(ngModel)]="burger.description" name="description">
+            </mat-form-field>
+
+            <mat-form-field class="inputField">
+                <input matInput placeholder="Burger name" [(ngModel)]="burger.burgerName" name="burgerName">
+            </mat-form-field>
+
+            <mat-form-field class="inputField">
+                <input matInput placeholder="Picture of burger" [(ngModel)]="burger.image" name="image">
+                <mat-hint>URL only</mat-hint>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+        </form>
+    </mat-grid-tile>
+
+</mat-grid-list>

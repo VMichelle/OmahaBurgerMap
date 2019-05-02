@@ -1,0 +1,49 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    // margin: 0;
+}
+
+body{
+    // background: brown;
+}
+
+h1{
+    text-align: center;
+}
+
+.example-card {
+    max-width: 300px;
+    height: 90%;
+    background-color: white;
+  }
+  
+.example-header-image {
+    background-image: url('https://png.pngtree.com/svg/20161106/c6cd3d018b.png');
+    background-size: cover;
+}
+
+.burgerCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cardBlock{
+    margin: 10px;
+}
+
+.description{
+    max-height: 75px;
+    overflow: scroll;
+}
+
+#sectionTitle{
+    margin: 25px;
+    color: orangered;
+}
+
+
+
+
+  
+

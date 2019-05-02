@@ -15,7 +15,17 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 import { environment } from '../environments/environment';
+import { MapService } from './services/map.service';
+import { AddBurgerComponent } from './components/add-burger/add-burger.component';
+import { FormsModule } from '@angular/forms';
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatCheckboxModule, MatCardModule} from '@angular/material';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -26,7 +36,8 @@ import { environment } from '../environments/environment';
     FooterComponent,
     MenuComponent,
     GoogleMapComponent,
-    HomePageComponent
+    HomePageComponent,
+    AddBurgerComponent
     
   ],
   imports: [
@@ -38,10 +49,13 @@ import { environment } from '../environments/environment';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule,
     AngularFireDatabaseModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule, MatCheckboxModule, MatInputModule, MatGridListModule, MatCardModule
 
   ],
-  providers: [],
+  providers: [MapService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
