@@ -1,0 +1,24 @@
+#map{
+    width: 100%;
+    height: 100%;
+}
+
+agm-map {
+    width: 100%;
+    height: 400px;
+}
+
+.infoWindow{
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.burgerIcon{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    height: 150px;
+}

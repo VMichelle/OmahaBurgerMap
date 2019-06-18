@@ -1,0 +1,17 @@
+<div id="map">
+  <agm-map [latitude]="lat" [zoom]="zoom" [longitude]="lng">
+    <agm-marker *ngFor="let burger of burgers" [latitude]="burger.latitude" [longitude]="burger.longitude">
+      <agm-info-window>
+        <div class="infoWindow">
+          <h2>{{burger.name}}</h2>
+          <div><img class="burgerIcon" src="{{burger.image}}" alt="burger-image"></div>
+          <h3>{{burger.burgerName}}</h3>
+          <div>{{burger.description}}</div>
+          <ng-content></ng-content>
+        </div>
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
+</div>
+
+<app-right-col></app-right-col>
