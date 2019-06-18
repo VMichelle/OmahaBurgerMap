@@ -44,7 +44,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     BrowserModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyARicJ_EFZKohgFJb1kqVhh2niykhmluC0'
+      apiKey: 'your api key'
     }),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule,
